@@ -5,7 +5,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class Utils {
-	
 	public static String hex(byte[] buffer, int start, int length) {
 		StringBuilder str = new StringBuilder();
 		for (int i = 0; i < length; i++) {
@@ -13,7 +12,10 @@ public class Utils {
 		}
 		return str.toString();
 	}
-	
+	public static String hex(byte[] buffer) {
+		return hex(buffer, 0, buffer.length);
+	}
+		
 	public static long uint(byte[] bytes, int offset, int length) {
 		long result = 0;
 		for (int i = 0; i < length; i++) {
