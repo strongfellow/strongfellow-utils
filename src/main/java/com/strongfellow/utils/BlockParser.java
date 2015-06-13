@@ -1,11 +1,7 @@
 package com.strongfellow.utils;
 
-import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.strongfellow.utils.data.Block;
 import com.strongfellow.utils.data.BlockHeader;
@@ -14,8 +10,6 @@ import com.strongfellow.utils.data.TXout;
 import com.strongfellow.utils.data.Transaction;
 
 public class BlockParser extends AbstractParser {
-	
-	private static final Logger logger = LoggerFactory.getLogger(BlockParser.class);
 
 	public Transaction parseTransaction(byte[] bytes, int offset) throws ParseException {
 		this.setBuffer(bytes, offset);
